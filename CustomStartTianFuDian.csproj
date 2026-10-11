@@ -1,0 +1,44 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net472</TargetFramework>
+        <LangVersion>11.0</LangVersion>
+        <Nullable>enable</Nullable>
+        <GenerateDependencyFile>false</GenerateDependencyFile>
+        <!-- 程序集名决定产物 DLL 名，与工程目录名无关 -->
+        <AssemblyName>CustomStartTianFuDian</AssemblyName>
+        <RootNamespace>CustomStartTianFuDian</RootNamespace>
+        <Version>1.0.0</Version>
+    </PropertyGroup>
+
+    <!-- 所有游戏/BepInEx 引用都不随产物复制 -->
+    <ItemDefinitionGroup>
+        <Reference>
+            <Private>false</Private>
+        </Reference>
+    </ItemDefinitionGroup>
+
+    <ItemGroup>
+        <!-- HarmonyX 2.5.5（游戏内置，随 BepInEx 5.4.17 提供） -->
+        <Reference Include="0Harmony">
+            <HintPath>E:\Steam\Install\steamapps\workshop\content\1189490\2824349934\BepInEx\core\0Harmony.dll</HintPath>
+        </Reference>
+        <Reference Include="BepInEx">
+            <HintPath>E:\Steam\Install\steamapps\workshop\content\1189490\2824349934\BepInEx\core\BepInEx.dll</HintPath>
+        </Reference>
+        <Reference Include="Assembly-CSharp">
+            <HintPath>E:\Steam\Install\steamapps\common\觅长生\觅长生_Data\Managed\Assembly-CSharp.dll</HintPath>
+        </Reference>
+        <Reference Include="UnityEngine">
+            <HintPath>E:\Steam\Install\steamapps\common\觅长生\觅长生_Data\Managed\UnityEngine.dll</HintPath>
+        </Reference>
+        <Reference Include="UnityEngine.CoreModule">
+            <HintPath>E:\Steam\Install\steamapps\common\觅长生\觅长生_Data\Managed\UnityEngine.CoreModule.dll</HintPath>
+        </Reference>
+        <!-- UnityEngine.UI.Text 由此程序集声明（MainUISelectTianFu.tianfuNum 的类型） -->
+        <Reference Include="UnityEngine.UI">
+            <HintPath>E:\Steam\Install\steamapps\common\觅长生\觅长生_Data\Managed\UnityEngine.UI.dll</HintPath>
+        </Reference>
+    </ItemGroup>
+
+</Project>
