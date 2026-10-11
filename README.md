@@ -1,3 +1,5 @@
+> 在 DeepSeek V4.1 Flash 的协助下完成
+
 # 自定义开局天赋点（CustomStartTianFuDian）
 
 《觅长生》BepInEx 插件：设置开局（创角）天赋界面的可用天赋点数，可配置。
